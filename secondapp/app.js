@@ -2,11 +2,11 @@ const http = require('http');
 const os = require('os');
 
 const server = http.createServer((req, res) => {
-  const appName = 'First Appliction'
+  const appName = 'Second Appliction'
   const appVersion = 'v1.2'
   const hostName = os.hostname();
-  const deployEnv = process.env.DEPLOY_ENV || 'DEV'; // Default env to deploy is DEV
-  const bgColor = process.env.BG_COLOR || '#FFFFFF'; // Default color is white
+  const deployEnv = process.env.DEPLOY_ENV || 'DEV'; // Default env to deploy is QA
+  const bgColor = process.env.BG_COLOR || '#FFE5B4'; // Default color is Peach
   const currentTime = new Date().toLocaleTimeString();
   const cpuUsage = os.loadavg()[0]; // Get the 1-minute load average
   const memoryUsage = (1 - os.freemem() / os.totalmem()) * 100; // Calculate memory usage percentage
